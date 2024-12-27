@@ -4,7 +4,7 @@
 // @version      1.1
 // @description  Remove ads and sponsored search results from Google Search more effectively
 // @author       M Leonard Blair
-// @match        https://www.google.com/*
+// @include      https://www.google.tld/*
 // @grant        none
 // ==/UserScript==
 
