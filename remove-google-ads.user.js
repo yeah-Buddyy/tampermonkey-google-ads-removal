@@ -23,8 +23,9 @@
             '.commercial-unit-desktop-rhs',
             '.commercial-unit-desktop-bottom',
             'div[data-pcu]', // PCU ad block
+            '#atvcap' // Sponsored label ad search results
             'span:contains("Sponsored")', // Sponsored label
-            'span:contains("Ad")' // Ad label
+            'span:contains("Ad")', // Ad label
         ];
 
         adSelectors.forEach(selector => {
@@ -35,7 +36,7 @@
         // Remove iframes that may contain ads
         let iframes = document.querySelectorAll('iframe');
         iframes.forEach(function(iframe) {
-            if (iframe.src.includes('googleads')) {
+            if (iframe.src.includes('googleads') || iframe.src.includes('google_ads')) {
                 iframe.remove();
             }
         });
